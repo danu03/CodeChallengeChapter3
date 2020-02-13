@@ -1,3 +1,5 @@
+import kotlin.system.exitProcess
+
 fun main() {
     var input: Int
     do {
@@ -13,12 +15,10 @@ fun main() {
         val suit = Suit()
         when (input) {
             1 -> suit.getPlayer()
-            2 -> {
-                println("Ini pilihan 2")
-            }
+            2 -> suit.getComp()
             3 -> {
                 println("Game shutdown")
-                System.exit(0)
+                exitProcess(0)
             }
         }
     } while (input != 3)
